@@ -1,0 +1,25 @@
+img{
+    display: flex;
+    list-style-type: none;
+    height: 5rem;
+    width: 7rem;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0%;
+}
+
+li a{
+    height: 10rem;
+    width: 20rem;
+    border: 1px solid whitesmoke;
+    margin: 0.5rem;
+    display: flex;
+    /* padding: 5rem; */
+
+}
