@@ -1,0 +1,25 @@
+div{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+
+}
+
+input{
+    border-radius: 10rem 0rem 0rem 10rem;
+    text-align: center;
+    height: 3rem;
+    width: 30%;
+    font-size: medium;
+}
+
+input:hover{
+    background-color: whitesmoke;
+}
+
+button{
+    background-color:  palevioletred;
+    border-radius: 0rem 10rem 10rem 0rem;
+    width: 10%;
+}

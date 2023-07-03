@@ -1,5 +1,5 @@
 import {Food} from './shared/models/Food_model';
-// import { Tag } from './app/shared/models/Tag';
+import { Tag } from './shared/models/Tags_model';
 
 export const sample_foods: Food[] = [
   {
@@ -30,7 +30,7 @@ export const sample_foods: Food[] = [
     price: 5,
     cookTime: '10-15',
     favorite: false,
-    origins: ['germany', 'us'],
+    origins: ['germany', 'US'],
     stars: 3.5,
     imgUrl: 'assets/food-3.jpg',
     tags: ['FastFood', 'Hamburger'],
@@ -70,13 +70,13 @@ export const sample_foods: Food[] = [
   },
 ]
 
-// export const sample_tags:Tag[] = [
-//   { name: 'All', count: 6 },
-//   { name: 'FastFood', count: 4 },
-//   { name: 'Pizza', count: 2 },
-//   { name: 'Lunch', count: 3 },
-//   { name: 'SlowFood', count: 2 },
-//   { name: 'Hamburger', count: 1 },
-//   { name: 'Fry', count: 1 },
-//   { name: 'Soup', count: 1 },
-// ]
+export const sample_tags: Tag[] = [
+  { name: 'All', count: 6 },
+  { name: 'FastFood', count: 4 },
+  { name: 'Pizza', count: 2 },
+  { name: 'Lunch', count: 3 },
+  { name: 'SlowFood', count: 2 },
+  { name: 'Hamburger', count: 1 },
+  { name: 'Fry', count: 1 },
+  { name: 'Soup', count: 1 },
+]

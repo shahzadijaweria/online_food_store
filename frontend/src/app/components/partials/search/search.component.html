@@ -1,4 +1,4 @@
 <div>
-    <input #search placeholder="Search Here! " type="text" (keyup)="searchFoodItem(search.value)" />
+    <input #search placeholder="Search Here! " type="text" [value]="searchFood" (keyup)="searchFoodItem(search.value)" (keydown)="clearTimeOut()"/>
     <button (click)="searchFoodItem(search.value)" class="btn-btn-primary">Search</button>
 </div>

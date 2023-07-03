@@ -8,7 +8,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
   searchFood = '';
-  constructor(activatedRouter: ActivatedRoute, private _router: Router) {
+  timeOut : any;
+
+  constructor(private activatedRouter: ActivatedRoute, private _router: Router) {
     activatedRouter.params.subscribe(params => {                    // for seraching
       if (params.searchItem)
         this.searchFood = params.searchItem;
@@ -16,14 +18,23 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+    this.activatedRouter.params.subscribe(params => {  
+      if (params.searchItem)
+        this.searchFood = params.searchItem;
+    });
   }
 
-  searchFoodItem(foodItem: any){
-    if (foodItem)
-      return this._router.navigateByUrl(`/search/${foodItem}`)       // if food is searched, show result
-    return this._router.navigateByUrl(`/`)                                  // in else, show all food items
-    
+  searchFoodItem(foodItem: any){  
+    this.timeOut = setTimeout(() => {                  // search when release keystroke with 1 sec delay
+      if (foodItem)
+        return this._router.navigateByUrl(`/search/${foodItem}`)       // if food is searched, show result
+      return this._router.navigateByUrl(`/`)                         // in else, show all food items
+    }, 1000);
+
+  }
+
+  clearTimeOut(){
+    clearTimeout(this.timeOut);                  // clear time out i.e. again start time when key stroke is hit again
   }
 
 }
